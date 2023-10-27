@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4a3a16c7c2e9de94b8057d0855f19a32
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Wonder Magic Free Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 55b20911ad685f04b830a3ba3347bd03, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
