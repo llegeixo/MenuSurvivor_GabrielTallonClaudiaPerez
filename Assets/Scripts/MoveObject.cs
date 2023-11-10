@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuManager : MonoBehaviour
+public class MoveObject : MonoBehaviour
 {
-    public static MenuManager instance {get; private set;}
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,9 +13,6 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Book)
-        {
-            //controller.anim.SetBool("BookIntro", true);
-        }
+        
     }
 }
