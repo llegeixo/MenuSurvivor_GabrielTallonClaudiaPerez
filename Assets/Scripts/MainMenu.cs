@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject _book;
-    [SerializeField] RectTransform _bookTransform;
+    [SerializeField] RectTransform _bookOptTransform;
+    [SerializeField] RectTransform _bookPlayTransform;
     [SerializeField] float _initialPosition;
     [SerializeField] float _finalPosition; 
     [SerializeField] float _bookSpeed = 5f;
@@ -46,30 +47,60 @@ public class MainMenu : MonoBehaviour
 
     public void OpenOptions()
     {
-        StartCoroutine("Book");
+        StartCoroutine("BookOpt");
     }
 
     public void OpenMenu()
     {
-        StartCoroutine("ReturnMenu");
+        StartCoroutine("ReturnMenuOpt");
     }
 
-    IEnumerator Book()
+    IEnumerator BookOpt()
     {
         
-        while (_bookTransform.position.y > _finalPosition)
+        while (_bookOptTransform.position.y > _finalPosition)
         {
-            _bookTransform.localPosition -= new Vector3(0, 1 * _bookSpeed, 0);
+            _bookOptTransform.localPosition -= new Vector3(0, 1 * _bookSpeed, 0);
             yield return new WaitForEndOfFrame();
         }
 
     }
 
-    IEnumerator ReturnMenu()
+    IEnumerator ReturnMenuOpt()
     {
-        while (_bookTransform.position.y <_initialPosition)
+        while (_bookOptTransform.position.y < _initialPosition)
         {
-            _bookTransform.localPosition += new Vector3(0, 1 * _bookSpeed, 0);
+            _bookOptTransform.localPosition += new Vector3(0, 1 * _bookSpeed, 0);
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    public void OpenPlay()
+    {
+        StartCoroutine("BookPlay");
+    }
+
+    public void OpenPlayMenu()
+    {
+        StartCoroutine("ReturnMenuPlay");
+    }
+
+    IEnumerator BookPlay()
+    {
+        
+        while (_bookPlayTransform.position.y > _finalPosition)
+        {
+            _bookPlayTransform.localPosition -= new Vector3(0, 1 * _bookSpeed, 0);
+            yield return new WaitForEndOfFrame();
+        }
+
+    }
+
+    IEnumerator ReturnMenuPlay()
+    {
+        while (_bookPlayTransform.position.y < _initialPosition)
+        {
+            _bookPlayTransform.localPosition += new Vector3(0, 1 * _bookSpeed, 0);
             yield return new WaitForEndOfFrame();
         }
     }
