@@ -152,6 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0511e40ec2c0c04a9aca5fa6dbd1ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _book: {fileID: 0}
+  _bookTransform: {fileID: 0}
+  _initialPosition: 0
+  _finalPosition: 0
+  _bookSpeed: 0
 --- !u!224 &58937687
 RectTransform:
   m_ObjectHideFlags: 0
@@ -933,17 +938,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2037853545}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1686190272}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: OpenOptions
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 719914448}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -1486,7 +1491,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 719914450}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -1699,7 +1704,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 719914449}
-  - component: {fileID: 719914450}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1726,18 +1730,6 @@ Transform:
   - {fileID: 553668182}
   m_Father: {fileID: 85924606}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &719914450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719914448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0511e40ec2c0c04a9aca5fa6dbd1ab0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &793023215
 GameObject:
   m_ObjectHideFlags: 0
@@ -2991,17 +2983,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1698061657}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 1686190272}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: OpenMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1328108263
 MonoBehaviour:
@@ -3116,6 +3108,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484286072}
   m_CullTransparentMesh: 1
+--- !u!1 &1686190271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1686190274}
+  - component: {fileID: 1686190273}
+  - component: {fileID: 1686190272}
+  m_Layer: 0
+  m_Name: MenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1686190272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686190271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0511e40ec2c0c04a9aca5fa6dbd1ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _book: {fileID: 0}
+  _bookTransform: {fileID: 2037853546}
+  _initialPosition: 1581
+  _finalPosition: 540
+  _bookSpeed: 7
+--- !u!114 &1686190273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686190271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f693a9fe675d742aafe41fd026965b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1686190274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686190271}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 407.9586, y: 1124.6371, z: -10.147649}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1698061657
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,7 +3257,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698061657}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: aca48756eb6a5f542b5218e84a28ee66, type: 2}
   m_CullingMode: 0
@@ -3879,7 +3933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2037853546
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3897,7 +3951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000106437335, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1060}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2037853547
@@ -3912,6 +3966,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0511e40ec2c0c04a9aca5fa6dbd1ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _book: {fileID: 0}
+  _bookTransform: {fileID: 0}
+  _initialPosition: 0
+  _finalPosition: 0
+  _bookSpeed: 0
 --- !u!1 &2121146960
 GameObject:
   m_ObjectHideFlags: 0
@@ -3996,3 +4055,4 @@ SceneRoots:
   - {fileID: 85924606}
   - {fileID: 456307459}
   - {fileID: 1812241140}
+  - {fileID: 1686190274}
