@@ -3024,8 +3024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _book: {fileID: 0}
-  _bookOptTransform: {fileID: 0}
-  _bookPlayTransform: {fileID: 0}
+  _bookOptTransform: {fileID: 2037853546}
+  _bookPlayTransform: {fileID: 58937687}
   _initialPosition: 1600
   _finalPosition: 540
   _bookSpeed: 7
